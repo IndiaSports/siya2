@@ -9,67 +9,140 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
-body{background:#000;color:#fff;min-height:100vh;padding:20px;padding-bottom:90px;display:flex;flex-direction:column;align-items:center}
+body{
+  background:#000;
+  color:#fff;
+  min-height:100vh;
+  padding:20px;
+  padding-bottom:110px;
+  display:flex;
+  flex-direction:column;
+  align-items:center
+}
 
 /* Logo */
-.logo-container{text-align:center;margin-bottom:30px}
-.logo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid #fff}
-.title{font-family:'Amaranth',sans-serif;font-size:2.8rem;background:linear-gradient(90deg,#DDD4FF,#FFCDDA,#FFF);-webkit-background-clip:text;color:transparent;margin-top:10px}
+.logo-container{text-align:center;margin-bottom:25px}
+.logo{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #fff
+}
+.title{
+  font-family:'Amaranth',sans-serif;
+  font-size:2.6rem;
+  background:linear-gradient(90deg,#DDD4FF,#FFCDDA,#FFF);
+  -webkit-background-clip:text;
+  color:transparent;
+  margin-top:10px
+}
 
 /* Section */
-.section-title{text-align:center;font-size:1.1rem;color:#ddd;margin:20px 0 15px}
+.section-title{
+  text-align:center;
+  font-size:1.05rem;
+  color:#ccc;
+  margin:18px 0 12px
+}
 
 /* Image Button */
-.image-btn-container{width:90%;max-width:400px;margin:10px auto 30px}
-.image-btn{width:100%;aspect-ratio:1920/308;border-radius:14%;border:2px solid #fff;object-fit:cover}
+.image-btn-container{
+  width:90%;
+  max-width:400px;
+  margin:10px auto 25px
+}
+.image-btn{
+  width:100%;
+  aspect-ratio:1920/308;
+  border-radius:16px;
+  border:2px solid #fff;
+  object-fit:cover
+}
 
-/* Stats */
-.stats-container{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;width:90%;max-width:500px;margin:30px auto}
-.stat-item{text-align:center;padding:15px;background:rgba(255,255,255,.05);border-radius:12px}
-.stat-percent{font-size:2rem;font-weight:bold;color:#4CAF50}
-.stat-text{font-size:.95rem;color:#ddd;margin-top:5px}
+/* Classic Stats */
+.stats-container{
+  width:90%;
+  max-width:500px;
+  margin:25px auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px
+}
+.stat-item{
+  display:flex;
+  align-items:center;
+  background:#1e1b4b;
+  padding:8px;
+  border-radius:50px
+}
+.stat-pill{
+  background:#6366f1;
+  color:#fff;
+  font-size:.75rem;
+  font-weight:bold;
+  padding:6px 12px;
+  border-radius:50px;
+  margin-right:12px;
+  white-space:nowrap
+}
+.stat-text{
+  font-size:.95rem;
+  color:#e5e7eb
+}
 
-/* Features */
-.features-container{width:90%;max-width:500px;margin:30px auto}
-.feature-item{background:rgba(221,212,255,.08);margin:12px 0;padding:14px;border-radius:10px;border-left:4px solid #FFCDDA}
-
-/* CTA */
-.cta-container{text-align:center;width:90%;max-width:500px;margin:30px auto}
-.cta-text{color:#ddd;line-height:1.5;margin-bottom:15px}
+/* Countdown */
+.countdown-box{
+  margin-top:20px;
+  background:rgba(255,255,255,.06);
+  padding:12px 20px;
+  border-radius:12px;
+  font-size:1rem;
+  color:#ddd;
+  text-align:center
+}
+.countdown-box span{
+  color:#ffcd00;
+  font-weight:bold
+}
 
 /* Footer */
-.footer{text-align:center;color:#777;margin-top:30px;font-size:.85rem}
+.footer{
+  text-align:center;
+  color:#777;
+  margin-top:30px;
+  font-size:.85rem
+}
 
-/* 🔥 Bottom Navigation */
+/* Bottom Navigation */
 .bottom-nav{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#000;
-border-top:1px solid rgba(255,255,255,.1);
-padding:12px;
-z-index:999;
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#000;
+  border-top:1px solid rgba(255,255,255,.1);
+  padding:14px;
+  z-index:999
 }
 .bottom-btn{
-display:block;
-width:92%;
-max-width:420px;
-margin:auto;
-text-align:center;
-padding:16px;
-border-radius:50px;
-font-size:1.1rem;
-font-weight:bold;
-color:#000;
-background:linear-gradient(90deg,#DDD4FF,#FFCDDA);
+  display:block;
+  width:92%;
+  max-width:420px;
+  margin:auto;
+  text-align:center;
+  padding:16px;
+  border-radius:50px;
+  font-size:1.05rem;
+  font-weight:bold;
+  color:#000;
+  background:linear-gradient(90deg,#DDD4FF,#FFCDDA)
 }
 
 /* Desktop */
 @media(min-width:768px){
-.logo{width:150px;height:150px}
-.title{font-size:3.5rem}
-.stats-container{grid-template-columns:repeat(4,1fr)}
+  .logo{width:150px;height:150px}
+  .title{font-size:3.4rem}
 }
 </style>
 </head>
@@ -77,43 +150,77 @@ background:linear-gradient(90deg,#DDD4FF,#FFCDDA);
 <body>
 
 <div class="logo-container">
-<img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/695b9500347d9_unnamed7.jpg" class="logo">
-<h1 class="title">Siya Queen</h1>
+  <img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/695b9500347d9_unnamed7.jpg" class="logo">
+  <h1 class="title">Siya Queen</h1>
 </div>
 
-<p class="section-title">Don't Forget to click this</p>
+<p class="section-title">Don’t forget to click below</p>
 
 <div class="image-btn-container">
-<a href="https://t.me/+s6uy8G0GPTowZTI9" target="_blank">
-<img id="rotatingImage" class="image-btn" src="https://d1yei2z3i6k35z.cloudfront.net/13184094/696be3bbaab76_6296152779126410878_121.jpg">
-</a>
+  <a href="https://t.me/+s6uy8G0GPTowZTI9">
+    <img id="rotatingImage" class="image-btn"
+     src="https://d1yei2z3i6k35z.cloudfront.net/13184094/696be3bbaab76_6296152779126410878_121.jpg">
+  </a>
 </div>
 
+<!-- Classic Stats -->
 <div class="stats-container">
-<div class="stat-item"><div class="stat-percent">95%</div><div class="stat-text">Toss Accuracy</div></div>
-<div class="stat-item"><div class="stat-percent">50K+</div><div class="stat-text">Followers</div></div>
-<div class="stat-item"><div class="stat-percent">Daily</div><div class="stat-text">Updates</div></div>
-<div class="stat-item"><div class="stat-percent">Pro</div><div class="stat-text">Analysis</div></div>
+  <div class="stat-item">
+    <span class="stat-pill">95%</span>
+    <span class="stat-text">Match & Toss Accuracy ✓</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-pill">50K+</span>
+    <span class="stat-text">Trusted Telegram Members</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-pill">Daily</span>
+    <span class="stat-text">Verified Match Updates</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-pill">Pro</span>
+    <span class="stat-text">Expert Level Analysis</span>
+  </div>
+</div>
+
+<!-- Countdown -->
+<div class="countdown-box">
+  Joining closes in <span id="timer">7</span> seconds…
 </div>
 
 <div class="footer">© Siya Queen • All Rights Reserved</div>
 
-<!-- 🔥 Bottom Navigation -->
+<!-- Bottom CTA -->
 <div class="bottom-nav">
-<a class="bottom-btn" href="https://t.me/+s6uy8G0GPTowZTI9" target="_blank">
-Join Siya Queen's Telegram
-</a>
+  <a class="bottom-btn" href="https://t.me/+s6uy8G0GPTowZTI9">
+    Join Siya Queen’s Telegram
+  </a>
 </div>
 
 <script>
+/* Image rotation */
 let i=0;
 const imgs=[
-"https://d1yei2z3i6k35z.cloudfront.net/13184094/696be3bbaab76_6296152779126410878_121.jpg",
-"https://d1yei2z3i6k35z.cloudfront.net/13184094/696be3b2cd700_6296152779126410876_121.jpg"
+ "https://d1yei2z3i6k35z.cloudfront.net/13184094/696be3bbaab76_6296152779126410878_121.jpg",
+ "https://d1yei2z3i6k35z.cloudfront.net/13184094/696be3b2cd700_6296152779126410876_121.jpg"
 ];
 setInterval(()=>{
-i=(i+1)%2;
-document.getElementById("rotatingImage").src=imgs[i];
+  i=(i+1)%imgs.length;
+  document.getElementById("rotatingImage").src=imgs[i];
+},1000);
+
+/* Countdown + Auto Redirect */
+let timeLeft = 7;
+const timerEl = document.getElementById("timer");
+const targetLink = "https://t.me/+s6uy8G0GPTowZTI9";
+
+const countdown = setInterval(()=>{
+  timeLeft--;
+  timerEl.textContent = timeLeft;
+  if(timeLeft <= 0){
+    clearInterval(countdown);
+    window.location.href = targetLink;
+  }
 },1000);
 </script>
 
