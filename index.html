@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siya Queen - Cricket Predictions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
+body{background:#000;color:#fff;min-height:100vh;padding:20px;padding-bottom:90px;display:flex;flex-direction:column;align-items:center}
+
+/* Logo */
+.logo-container{text-align:center;margin-bottom:30px}
+.logo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid #fff}
+.title{font-family:'Amaranth',sans-serif;font-size:2.8rem;background:linear-gradient(90deg,#DDD4FF,#FFCDDA,#FFF);-webkit-background-clip:text;color:transparent;margin-top:10px}
+
+/* Section */
+.section-title{text-align:center;font-size:1.1rem;color:#ddd;margin:20px 0 15px}
+
+/* Image Button */
+.image-btn-container{width:90%;max-width:400px;margin:10px auto 30px}
+.image-btn{width:100%;aspect-ratio:1920/308;border-radius:14%;border:2px solid #fff;object-fit:cover}
+
+/* Stats */
+.stats-container{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;width:90%;max-width:500px;margin:30px auto}
+.stat-item{text-align:center;padding:15px;background:rgba(255,255,255,.05);border-radius:12px}
+.stat-percent{font-size:2rem;font-weight:bold;color:#4CAF50}
+.stat-text{font-size:.95rem;color:#ddd;margin-top:5px}
+
+/* Features */
+.features-container{width:90%;max-width:500px;margin:30px auto}
+.feature-item{background:rgba(221,212,255,.08);margin:12px 0;padding:14px;border-radius:10px;border-left:4px solid #FFCDDA}
+
+/* CTA */
+.cta-container{text-align:center;width:90%;max-width:500px;margin:30px auto}
+.cta-text{color:#ddd;line-height:1.5;margin-bottom:15px}
+
+/* Footer */
+.footer{text-align:center;color:#777;margin-top:30px;font-size:.85rem}
+
+/* 🔥 Bottom Navigation */
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#000;
+border-top:1px solid rgba(255,255,255,.1);
+padding:12px;
+z-index:999;
+}
+.bottom-btn{
+display:block;
+width:92%;
+max-width:420px;
+margin:auto;
+text-align:center;
+padding:16px;
+border-radius:50px;
+font-size:1.1rem;
+font-weight:bold;
+color:#000;
+background:linear-gradient(90deg,#DDD4FF,#FFCDDA);
+}
+
+/* Desktop */
+@media(min-width:768px){
+.logo{width:150px;height:150px}
+.title{font-size:3.5rem}
+.stats-container{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+</head>
+
+<body>
+
+<div class="logo-container">
+<img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/695b9500347d9_unnamed7.jpg" class="logo">
+<h1 class="title">Siya Queen</h1>
+</div>
+
+<p class="section-title">Don't Forget to click this</p>
+
+<div class="image-btn-container">
+<a href="https://t.me/+s6uy8G0GPTowZTI9" target="_blank">
+<img id="rotatingImage" class="image-btn" src="https://d1yei2z3i6k35z.cloudfront.net/13184094/696be3bbaab76_6296152779126410878_121.jpg">
+</a>
+</div>
+
+<div class="stats-container">
+<div class="stat-item"><div class="stat-percent">95%</div><div class="stat-text">Toss Accuracy</div></div>
+<div class="stat-item"><div class="stat-percent">50K+</div><div class="stat-text">Followers</div></div>
+<div class="stat-item"><div class="stat-percent">Daily</div><div class="stat-text">Updates</div></div>
+<div class="stat-item"><div class="stat-percent">Pro</div><div class="stat-text">Analysis</div></div>
+</div>
+
+<div class="features-container">
+<div class="feature-item">Expert Match Predictions</div>
+<div class="feature-item">Accurate Match Analysis</div>
+<div class="feature-item">Free Daily Cricket Tips</div>
+<div class="feature-item">Live Match Updates</div>
+<div class="feature-item">Winning Strategies</div>
+</div>
+
+<div class="cta-container">
+<h2>Join My Telegram Channel</h2>
+<p class="cta-text">Get free cricket toss predictions and match analysis daily. Join thousands of followers who trust my predictions!</p>
+<p class="section-title">⇓ Click the Button Below & Join Now ⇓</p>
+</div>
+
+<div class="footer">© Siya Queen • All Rights Reserved</div>
+
+<!-- 🔥 Bottom Navigation -->
+<div class="bottom-nav">
+<a class="bottom-btn" href="https://t.me/+s6uy8G0GPTowZTI9" target="_blank">
+Join Siya Queen's Telegram
+</a>
+</div>
+
+<script>
+let i=0;
+const imgs=[
+"https://d1yei2z3i6k35z.cloudfront.net/13184094/696be3bbaab76_6296152779126410878_121.jpg",
+"https://d1yei2z3i6k35z.cloudfront.net/13184094/696be3b2cd700_6296152779126410876_121.jpg"
+];
+setInterval(()=>{
+i=(i+1)%2;
+document.getElementById("rotatingImage").src=imgs[i];
+},1000);
+</script>
+
+</body>
+</html>
